@@ -6,6 +6,8 @@ require('dotenv').config();
 
 const app = express();
 
+app.use(morgan('dev'));
+
 app.get('/', async (req, res) => {
     res.send('Hello from express');
 });
